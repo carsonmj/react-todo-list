@@ -3,7 +3,6 @@ import TodoListItem from './TodoListItem';
 import './TodoList.scss'
 
 const TodoList = ({ todos, onRemove, onToggle }) => {
-    console.log('list --->', todos);
     return (
         <div className="TodoList">
             {todos.map(todo => (
