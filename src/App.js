@@ -3,36 +3,8 @@ import TodoTemplate from './components/TodoTemplate';
 import TodoInsert from './components/TodoInsert';
 import TodoList from './components/TodoList';
 
-function createBulkTodos() {
-  const array = [];
-  for(let i = 1; i <= 2500; i++){
-    array.push({
-      id: i,
-      text: `to do ${i}`,
-      checked: false,
-    })
-  }
-  return array;
-}
-
 const App = () => {
-  const [todos, setTodos] = useState(createBulkTodos
-    // [{
-    //   id: 1,
-    //   text: 'react practice',
-    //   checked: true,
-    // },
-    // {
-    //   id: 2,
-    //   text: 'component style',
-    //   checked: true,
-    // },
-    // {
-    //   id: 3,
-    //   text: 'make a example',
-    //   checked: false,
-    // }]
-  );
+  const [todos, setTodos] = useState([]);
 
   // 고유값으로 사용될 id
   const nextId = useRef(4);
